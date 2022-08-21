@@ -54,7 +54,7 @@ namespace LabExercise
           string expectedemail = email.GetAttribute("placeholder");
           string actualemail = "name@example.com";
           Assert.AreEqual(expectedemail,actualemail,"email is not matched");
-          Thread.Sleep(3000);
+
 
         }
         [DataTestMethod]
@@ -75,8 +75,6 @@ namespace LabExercise
             ((IJavaScriptExecutor)driver) .ExecuteScript("arguments[0].scrollIntoView(true);", subject);
             dropDown = new SelectElement(subject);
             dropDown.SelectByText(subhead);
-            System.Diagnostics.Debug.WriteLine("selected dropdown");
-            Thread.Sleep(2000); 
         
         }
 
